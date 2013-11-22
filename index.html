@@ -23,14 +23,17 @@
   <ul class="todoList">
     <li class="todoItem emptyList">There are currently no to-do list items.</li>
   </ul>
-  <script src="js/vendor/ydn.db-isw-core-qry.js"></script>
-  <script src="js/main.js"></script>
   <script>
-  document.addEventListener( "DOMContentLoaded", function()
+  Modernizr.load([
   {
+    load : ['js/vendor/ydn.db-isw-core-qry.js','js/main.js'],
+    complete : function () {
+      // Run this after everything in this group has downloaded
+      // and executed, as well everything in all previous groups
       todoApp = new todoListClass();
 	  todoApp.init();
-  }, false );
+    }
+  }]);
   </script>
-</body>
+  </body>
 </html>
