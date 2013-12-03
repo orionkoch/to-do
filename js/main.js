@@ -141,7 +141,7 @@ function todoListClass()
 		li.className = liClassName;
 		li.appendChild(checkbox);
 		li.appendChild(text);
-		todos.appendChild(li);
+		todos.insertBefore(li, todos.childNodes[0]);
 	}
 
 
